@@ -17,8 +17,6 @@ public class MortgageCalculator {
         float calculateInterest = (interest / 100) / 12;
         int numPayments = period * 12;
 
-
-
         double total = principal * (calculateInterest * (Math.pow((1 + calculateInterest), numPayments)) / (Math.pow(1 + calculateInterest, numPayments) - 1));
         NumberFormat mortgage = NumberFormat.getCurrencyInstance();
         String result = mortgage.format(total); 
